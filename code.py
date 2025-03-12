@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader, Dataset
 from torch.optim import Adam
 from sklearn.model_selection import train_test_split
 
-file_path = "/training.1600000.processed.noemoticon.csv"
+file_path = "/testdata.manual.2009.06.14.csv"
 df = pd.read_csv(file_path, encoding='latin-1', header=None, usecols=[0, 5], names=['label', 'text'])
 
 df['label'] = df['label'].map({0: 0, 4: 1})
